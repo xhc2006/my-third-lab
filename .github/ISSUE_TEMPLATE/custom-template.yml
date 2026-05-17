@@ -1,0 +1,59 @@
+name: Custom Suggestion Template
+description: Submit a suggestion or request
+title: "[Suggestion]: "
+labels: ["enhancement", "suggestion"]
+assignees:
+  - xhc2006 # 改成你的GitHub用户名
+
+body:
+  - type: input
+    id: contact_details
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you?
+      placeholder: your.email@example.com
+    validations:
+      required: false
+
+  - type: input
+    id: your_name
+    attributes:
+      label: What is your name?
+      placeholder: e.g. John Doe
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Type of request?
+      options:
+        - New feature
+        - Improvement
+        - Bug report
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: What OS?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion_details
+    attributes:
+      label: What are the details of your suggestion?
+      description: Please describe your suggestion or request in detail.
+      placeholder: Tell us your idea...
+    validations:
+      required: true
